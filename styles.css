@@ -51,6 +51,28 @@ body {
   min-height: 100vh;
 }
 
+@keyframes ambientDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(1.8rem, -1.2rem, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes ambientPulse {
+  0%,
+  100% {
+    opacity: 0.34;
+  }
+  50% {
+    opacity: 0.52;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -254,6 +276,24 @@ select {
     url("hero.png") center/cover no-repeat;
   opacity: 0.32;
   pointer-events: none;
+}
+
+.hero::after,
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -12% 56%;
+  width: clamp(18rem, 28vw, 26rem);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 32% 30%, rgba(140, 240, 202, 0.3), transparent 38%),
+    radial-gradient(circle at 65% 58%, rgba(77, 163, 255, 0.22), transparent 48%),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.06), transparent 70%);
+  filter: blur(18px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: ambientDrift 12s ease-in-out infinite, ambientPulse 9s ease-in-out infinite;
 }
 
 .hero-inner {
@@ -586,13 +626,17 @@ select {
 
 .stat-card {
   padding: 1.55rem;
+  min-height: 100%;
 }
 
 .stat-card strong {
   display: block;
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
   letter-spacing: -0.04em;
+  line-height: 0.94;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .stat-card p {
