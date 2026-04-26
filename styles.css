@@ -236,6 +236,10 @@ select {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.nav-drawer-cta {
+  display: none;
+}
+
 .hero {
   position: relative;
   padding: clamp(4rem, 8vw, 7rem) 0 clamp(3rem, 7vw, 6rem);
@@ -1048,7 +1052,9 @@ select {
   }
 
   .nav {
-    align-items: flex-start;
+    min-height: 68px;
+    padding: 0.72rem 0;
+    align-items: center;
   }
 
   .brand-copy {
@@ -1060,14 +1066,13 @@ select {
   }
 
   .nav-actions {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 0.75rem;
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
   }
 
   .nav-cta {
-    flex: 1 1 auto;
-    justify-content: center;
+    display: none;
   }
 
   .nav-menu {
@@ -1077,9 +1082,28 @@ select {
   .nav-drawer {
     top: calc(100% + 0.6rem);
     right: 0;
-    width: calc(100vw - 1.15rem);
+    width: min(320px, calc(100vw - 1.15rem));
     max-height: min(68vh, 540px);
     overflow: auto;
+  }
+
+  .nav-drawer-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 0.4rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--energy), #0aa875);
+    color: #04111d;
+    font-weight: 800;
+    box-shadow: 0 16px 30px rgba(16, 201, 140, 0.18);
+  }
+
+  .nav-drawer-cta:hover,
+  .nav-drawer-cta.active {
+    background: linear-gradient(135deg, var(--energy), #0aa875);
+    color: #04111d;
   }
 
   .eyebrow {
