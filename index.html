@@ -21,8 +21,8 @@
       <a class="brand" href="index.html" aria-label="Evostored – Startseite">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <rect x="3.5" y="2.5" width="17" height="19" rx="5" fill="none" stroke="#0e1726" stroke-width="1.7"/>
-          <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#1f5eea"/>
-          <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#1f5eea" stroke-width="1.4"/>
+          <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#ffb840"/>
+          <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#ffb840" stroke-width="1.4"/>
         </svg>
         evostored
       </a>
@@ -147,7 +147,7 @@
         <div class="section-head rv">
           <span class="kicker k-pv">Das Energieproblem</span>
           <h2>Strom entsteht mittags. Gebraucht wird er abends.</h2>
-          <p>Erneuerbare Energie ist nicht immer dann verfügbar, wenn wir sie brauchen. Ohne Speicher verpufft der Überschuss vom Mittag – und der Abend bleibt teuer.</p>
+          <p>Erneuerbare Energie ist nicht immer dann da, wenn wir sie brauchen – und der Strompreis schwankt im selben Rhythmus. Ohne Speicher verpufft der günstige Mittag, und der teure Abend bleibt teuer.</p>
         </div>
 
         <figure class="daychart-card chart-draw rv rv-2" aria-label="Typischer Tagesverlauf: Solarerzeugung erreicht ihren Höhepunkt mittags, der Strombedarf abends">
@@ -180,14 +180,46 @@
           </figcaption>
         </figure>
 
+        <p class="section-bridge rv rv-2">Dasselbe Muster steckt im Preis: <strong>An der Strombörse kostet Strom mittags oft fast nichts – abends ein Vielfaches.</strong> Wer speichern kann, kauft günstig ein und nutzt die Energie, wenn sie teuer ist.</p>
+
+        <figure class="daychart-card chart-draw rv rv-2" aria-label="Schematischer Verlauf des Börsenstrompreises: mittags günstig bis negativ, abends teuer">
+          <svg class="daychart-svg price-svg" viewBox="0 0 720 250" role="img" aria-hidden="true">
+            <line class="axis" x1="40" y1="204" x2="690" y2="204" />
+            <line class="axis" x1="202" y1="204" x2="202" y2="198" />
+            <line class="axis" x1="365" y1="204" x2="365" y2="198" />
+            <line class="axis" x1="527" y1="204" x2="527" y2="198" />
+            <text x="34" y="222">0 Uhr</text>
+            <text x="188" y="222">6 Uhr</text>
+            <text x="348" y="222">12 Uhr</text>
+            <text x="508" y="222">18 Uhr</text>
+            <text x="664" y="222">24 Uhr</text>
+
+            <rect class="band-cheap" x="305" y="36" width="130" height="168" />
+            <rect class="band-dear" x="540" y="36" width="105" height="168" />
+            <line class="zero-line" x1="40" y1="168" x2="690" y2="168" />
+            <text x="44" y="161">0 ct/kWh</text>
+
+            <path class="curve-price" d="M40 128 C90 120 130 112 176 108 C230 103 270 140 320 172 C345 186 375 192 405 184 C440 174 470 152 500 132 C525 114 550 82 578 64 C598 52 615 56 632 74 C652 96 672 114 690 122" />
+
+            <text class="band-label-cheap" x="312" y="56">Günstig einkaufen</text>
+            <text x="312" y="72">teils unter 0 ct</text>
+            <text class="band-label-dear" x="546" y="178">Abendspitze</text>
+            <text x="546" y="194">Bedarf hoch</text>
+          </svg>
+          <figcaption class="daychart-legend">
+            <span><i class="l-price"></i>Strompreis an der Börse</span>
+            <span>Schematischer Tagesverlauf</span>
+          </figcaption>
+        </figure>
+
         <div class="fact-row rv rv-3">
-          <div class="fact">
+          <div class="fact f-load">
             <strong>457 h</strong>
-            <span>negative Strompreise im deutschen Großhandel allein 2024 – Überschuss, den kaum jemand nutzt.</span>
+            <span>negative Börsenpreise im deutschen Großhandel allein 2024 – Strom gab es zeitweise geschenkt.</span>
           </div>
-          <div class="fact">
+          <div class="fact f-cell">
             <strong>Fazit</strong>
-            <span>Energie muss nicht nur erzeugt werden. Sie muss zur richtigen Zeit verfügbar sein.</span>
+            <span>Ein Speicher kauft günstig ein und liefert, wenn Strom teuer ist. Bisher brauchte man dafür eine eigene Batterie.</span>
           </div>
         </div>
       </div>
@@ -199,7 +231,7 @@
         <div class="section-head rv">
           <span class="kicker k-load">Das bisherige Modell</span>
           <h2>Die Antwort bisher: eine eigene Batterie. Für jeden. Im Keller.</h2>
-          <p>Ein Heimspeicher löst das Zeitproblem – aber nur für Haushalte, die kaufen, montieren und besitzen können. Für die Mehrheit bleibt er unerreichbar.</p>
+          <p>Ein eigener Heimspeicher löst genau das: günstig laden, abends nutzen. Aber nur für Haushalte, die kaufen, montieren und besitzen können. Für die Mehrheit bleibt er unerreichbar.</p>
         </div>
 
         <div class="oldway">
@@ -314,7 +346,7 @@
               </svg>
             </div>
             <h3>Dein Anteil wird geladen</h3>
-            <p>Der zentrale Speicher lädt bevorzugt dann, wenn Strom günstig ist oder im Überschuss da ist. Dein Paket ist dein Anteil daran.</p>
+            <p>Der zentrale Speicher kauft bevorzugt dann ein, wenn Strom an der Börse günstig ist oder Überschuss im Netz da ist. Dein Paket ist dein Anteil daran.</p>
           </article>
 
           <article class="step-card rv rv-3">
@@ -475,7 +507,7 @@
             <span class="path-link">Pakete ansehen</span>
           </a>
           <a class="path-card rv rv-2" href="partner.html">
-            <span class="kicker">Für Partner</span>
+            <span class="kicker k-blue">Für Partner</span>
             <h3>Die digitale Kundenschicht über Speicherinfrastruktur</h3>
             <ul>
               <li>Zentrale Blöcke statt 500 Einzelinstallationen</li>
@@ -553,10 +585,10 @@
         </div>
 
         <div class="eco-grid">
-          <div class="eco-card rv"><small>Speichertechnik</small><h3>Batterieblock &amp; Energiemanagement</h3><p>Industrielle Speichersysteme und deren Steuerung – erprobte Technik statt Eigenbau.</p></div>
-          <div class="eco-card rv rv-2"><small>Erzeugung</small><h3>Wind- &amp; Solarpartner</h3><p>Reale erneuerbare Erzeugung und planbare Beschaffung aus der Region.</p></div>
-          <div class="eco-card rv rv-3"><small>Energiewirtschaft</small><h3>Stadtwerk &amp; Lieferpartner</h3><p>Stromeinkauf, Marktprozesse und Abrechnung liegen bei erfahrenen Marktakteuren.</p></div>
-          <div class="eco-card rv rv-4"><small>Software</small><h3>App &amp; Datenplattform</h3><p>Paketverwaltung, Messlogik und Kundentransparenz – geplant mit spezialisierten CleanTech-Softwarepartnern.</p></div>
+          <div class="eco-card e-cell rv"><small>Speichertechnik</small><h3>Batterieblock &amp; Energiemanagement</h3><p>Industrielle Speichersysteme und deren Steuerung – erprobte Technik statt Eigenbau.</p></div>
+          <div class="eco-card e-pv rv rv-2"><small>Erzeugung</small><h3>Wind- &amp; Solarpartner</h3><p>Reale erneuerbare Erzeugung und planbare Beschaffung aus der Region.</p></div>
+          <div class="eco-card e-blue rv rv-3"><small>Energiewirtschaft</small><h3>Stadtwerk &amp; Lieferpartner</h3><p>Stromeinkauf, Marktprozesse und Abrechnung liegen bei erfahrenen Marktakteuren.</p></div>
+          <div class="eco-card e-load rv rv-4"><small>Software</small><h3>App &amp; Datenplattform</h3><p>Paketverwaltung, Messlogik und Kundentransparenz – geplant mit spezialisierten CleanTech-Softwarepartnern.</p></div>
         </div>
         <div class="eco-center rv rv-3">
           <strong>Evostored ist die digitale Verbindungsebene.</strong>
@@ -594,8 +626,8 @@
         <a class="brand" href="index.html">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3.5" y="2.5" width="17" height="19" rx="5" fill="none" stroke="#eef3fc" stroke-width="1.7"/>
-            <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#4d8dff"/>
-            <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#4d8dff" stroke-width="1.4"/>
+            <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#ffb840"/>
+            <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#ffb840" stroke-width="1.4"/>
           </svg>
           evostored
         </a>
