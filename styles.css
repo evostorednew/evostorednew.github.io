@@ -408,16 +408,33 @@ h1, h2, h3 {
 .flow-svg { width: 100%; height: auto; }
 .flow-svg text { font-family: var(--mono); letter-spacing: 0.02em; }
 
-.fs-node { fill: var(--cloud); stroke: var(--line-strong); }
-.fs-node-core { fill: var(--brand-soft); stroke: var(--brand); }
-.fs-icon { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.fs-label { fill: var(--ink); font-size: 12.5px; font-weight: 500; }
-.fs-sub { fill: var(--ink-soft); font-size: 10px; }
-.fs-line { stroke: var(--line-strong); stroke-width: 1.5; fill: none; }
-.fs-core-word { fill: var(--brand-deep); font-size: 12.5px; font-weight: 600; letter-spacing: 0.2em; }
 
-.fs-soc-track { fill: #e2e7ef; }
-.fs-soc-fill { fill: var(--cell); transition: width 1.1s var(--ease); }
+
+
+/* ------------------------------------------------ Hero: Dein Anteil im Block */
+.v1-house { stroke: var(--ink-soft); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.v1-net { stroke: var(--line-strong); fill: none; stroke-width: 1.3; }
+.v1-core { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 1.5; }
+.v1-core-word { fill: var(--brand-deep); font-size: 12.5px; font-weight: 600; letter-spacing: 0.18em; }
+.v1-block { fill: #fbfcfe; stroke: var(--ink); stroke-width: 1.5; }
+.v1-block-label { fill: var(--faint); font-size: 9.5px; letter-spacing: 0.12em; }
+.v1-cell { fill: #fffdf7; stroke: var(--cell-deep); stroke-width: 1.1; }
+.v1-cell-fill {
+  fill: rgba(242, 169, 0, 0.65);
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transform: scaleY(0.8);
+  transition: transform 1.1s var(--ease);
+}
+.is-evening .v1-cell-fill { transform: scaleY(0.38); }
+.v1-cell-res { fill: var(--cloud); stroke: #b3bdcc; stroke-dasharray: 3 3; stroke-width: 1.1; }
+.v1-mine { stroke: var(--brand); stroke-width: 2; }
+.v1-mine-ring { fill: none; stroke: var(--brand); stroke-width: 1.4; opacity: 0.5; animation: v1glow 2.6s ease-in-out infinite; }
+@keyframes v1glow { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.7; } }
+.v1-callout { fill: var(--brand); }
+.v1-callout-text { fill: var(--brand-ink); font-size: 10px; font-weight: 500; letter-spacing: 0.04em; }
+.v1-callout-short { display: none; }
+.v1-leader { stroke: var(--brand); stroke-width: 1.2; stroke-dasharray: 2 3; fill: none; opacity: 0.7; }
 
 /* Impulse entlang der Flusslinie */
 .pulse {
@@ -1249,6 +1266,11 @@ h1, h2, h3 {
   .price-svg .band-label-cheap, .price-svg .band-label-dear { font-size: 17px; }
   .network-svg .n-core-label { font-size: 17px; }
   .network-svg .n-sub { font-size: 15px; }
+  .flow-svg .v1-core-word { font-size: 15px; }
+  .flow-svg .v1-block-label { font-size: 12px; }
+  .flow-svg .v1-callout-text { font-size: 13px; }
+  .v1-callout-long { display: none; }
+  .v1-callout-short { display: initial; }
   .block-svg text { font-size: 14px; }
   .block-svg .b-cap-one { display: none; }
   .block-svg .b-cap-two { display: block; }
@@ -1259,6 +1281,8 @@ h1, h2, h3 {
   html { scroll-behavior: auto; }
   .js .rv { opacity: 1; transform: none; transition: none; }
   .pulse { animation: none; opacity: 0; }
+  .v1-mine-ring { animation: none; opacity: 0.5; }
+  .v1-cell-fill { transition: none; }
   .js .chart-draw .curve-pv, .js .chart-draw .curve-price, .js .chart-draw .curve-load { stroke-dashoffset: 0; transition: none; }
   .soc-bar i, .fs-soc-fill, .dotfield i { transition: none; }
   .btn, .path-card { transition: none; }
