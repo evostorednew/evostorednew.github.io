@@ -43,8 +43,8 @@
     var socText = flow.querySelector(".fs-soc-text");
     var SOC_MAX_W = 120; /* Breite der SoC-Leiste im SVG */
     var phases = [
-      { evening: false, label: "Mittag · Überschuss wird gespeichert", soc: 0.84 },
-      { evening: true, label: "Abend · Speicher liefert zurück", soc: 0.41 }
+      { evening: false, label: "Viel Wind · Überschuss wird gespeichert", soc: 0.84 },
+      { evening: true, label: "Abend · Anteile versorgen die Mieter", soc: 0.41 }
     ];
     var phaseIndex = 0;
 

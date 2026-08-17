@@ -21,8 +21,8 @@
       <a class="brand" href="index.html" aria-label="Evostored – Startseite">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <rect x="3.5" y="2.5" width="17" height="19" rx="5" fill="none" stroke="#1e40af" stroke-width="1.7"/>
-          <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#f2a900"/>
-          <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#f2a900" stroke-width="1.4"/>
+          <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#7fa5ff"/>
+          <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#7fa5ff" stroke-width="1.4"/>
         </svg>
         evostored
       </a>
@@ -69,92 +69,102 @@
           </div>
         </div>
 
-        <figure class="flow-scene" aria-label="Ein zentraler Speicherblock versorgt viele Haushalte – ein Paket darin gehört dir">
+        <figure class="flow-scene" aria-label="Windkraftanlage lädt bei Überschuss den großen Speicher daneben; der ist in viele Anteile geteilt und versorgt Mieter im Mehrfamilienhaus mit günstigem Strom">
           <div class="flow-head">
-            <span class="flow-title">Ein Block · Viele Haushalte</span>
-            <span class="flow-state"><i></i><span>Mittag · Überschuss wird gespeichert</span></span>
+            <span class="flow-title">Vom Wind zu deinem Anteil</span>
+            <span class="flow-state"><i></i><span>Viel Wind · Überschuss wird gespeichert</span></span>
           </div>
           <svg class="flow-svg" viewBox="0 0 380 470" role="img" aria-hidden="true">
-            <path class="v1-house" d="M30 46 L44 30 L58 46 M34 43 v15 h20 v-15 M41 58 v-8 h6 v8" />
-            <path class="v1-house" d="M103 46 L117 30 L131 46 M107 43 v15 h20 v-15 M114 58 v-8 h6 v8" />
-            <path class="v1-house" d="M176 46 L190 30 L204 46 M180 43 v15 h20 v-15 M187 58 v-8 h6 v8" />
-            <path class="v1-house" d="M249 46 L263 30 L277 46 M253 43 v15 h20 v-15 M260 58 v-8 h6 v8" />
-            <path class="v1-house" d="M322 46 L336 30 L350 46 M326 43 v15 h20 v-15 M333 58 v-8 h6 v8" />
-            
-            <path class="v1-net" d="M44 64 C44 100 118 100 166 122" />
-            <path class="v1-net" d="M117 64 C117 96 148 100 172 116" />
-            <path class="v1-net" d="M190 64 L190 118" />
-            <path class="v1-net" d="M263 64 C263 96 232 100 208 116" />
-            <path class="v1-net" d="M336 64 C336 100 262 100 214 122" />
-            <path class="v1-net" d="M190 164 L190 212" />
+            <!-- Dein-Anteil-Callout -->
+            <rect class="wh-callout" x="252" y="14" width="96" height="24" rx="8" />
+            <text class="wh-callout-text" x="300" y="30" text-anchor="middle">Dein Anteil</text>
+            <path class="wh-leader" d="M302 38 C306 46 310 52 313 60" />
+            <!-- Windkraftanlage -->
+            <g class="wh-gusts">
+              <path d="M24 72 c8 -6 16 -6 24 0" />
+              <path d="M18 92 c10 -7 20 -7 30 0" />
+              <path d="M24 112 c8 -6 16 -6 24 0" />
+            </g>
+            <path class="wh-mast" d="M80 158 L80 90" />
+            <g class="wh-rotor">
+              <path d="M80 84 L80 50 M80 84 L110 100 M80 84 L50 100" />
+            </g>
+            <circle class="wh-hub" cx="80" cy="84" r="4.2" />
+            <!-- Windfluss in den Speicher -->
+            <path class="wh-net" d="M96 100 L178 100" />
             <g class="p-charge">
-              <circle class="pulse" r="3.4" fill="#1f5eea" style="--path: path('M190 64 L190 244'); --dur: 3s;" />
-              <circle class="pulse" r="3.4" fill="#1f5eea" style="--path: path('M190 64 L190 244'); --dur: 3s; --delay: 1s;" />
-              <circle class="pulse" r="3.4" fill="#1f5eea" style="--path: path('M190 64 L190 244'); --dur: 3s; --delay: 2s;" />
+              <circle class="pulse" r="3.4" fill="#1f9e6d" style="--path: path('M96 100 L178 100'); --dur: 1.9s;" />
+              <circle class="pulse" r="3.4" fill="#1f9e6d" style="--path: path('M96 100 L178 100'); --dur: 1.9s; --delay: 0.65s;" />
+              <circle class="pulse" r="3.4" fill="#1f9e6d" style="--path: path('M96 100 L178 100'); --dur: 1.9s; --delay: 1.3s;" />
             </g>
-            <g class="p-discharge">
-              <circle class="pulse pulse-up" r="3.4" fill="#f2a900" style="--path: path('M190 64 L190 244'); --dur: 3s;" />
-              <circle class="pulse pulse-up" r="3.4" fill="#f2a900" style="--path: path('M190 64 L190 244'); --dur: 3s; --delay: 1s;" />
-              <circle class="pulse pulse-up" r="3.4" fill="#f2a900" style="--path: path('M190 64 L190 244'); --dur: 3s; --delay: 2s;" />
-            </g>
-            <rect class="v1-core" x="116" y="124" width="148" height="40" rx="13" />
-            <text class="v1-core-word" x="190" y="149" text-anchor="middle">EVOSTORED</text>
-            <rect class="v1-block" x="58" y="212" width="264" height="204" rx="16" />
-            <text class="v1-block-label" x="74" y="236">ZENTRALER SPEICHERBLOCK</text>
+            <!-- Großer Speicher, in Anteile geteilt -->
+            <rect class="wh-block" x="180" y="52" width="160" height="108" rx="12" />
             <g>
-              <rect class="v1-cell" x="74" y="246" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="78" y="250" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="114" y="246" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="118" y="250" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="154" y="246" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="158" y="250" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="194" y="246" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="198" y="250" width="26" height="26" rx="3" />
-              <rect class="v1-mine-ring" x="230" y="242" width="42" height="42" rx="8" />
-              <rect class="v1-cell v1-mine" x="234" y="246" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="238" y="250" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="274" y="246" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="278" y="250" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="74" y="286" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="78" y="290" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="114" y="286" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="118" y="290" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="154" y="286" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="158" y="290" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="194" y="286" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="198" y="290" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="234" y="286" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="238" y="290" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="274" y="286" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="278" y="290" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="74" y="326" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="78" y="330" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="114" y="326" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="118" y="330" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="154" y="326" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="158" y="330" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="194" y="326" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="198" y="330" width="26" height="26" rx="3" />
-              <rect class="v1-cell-res" x="234" y="326" width="34" height="34" rx="6" />
-              <rect class="v1-cell-res" x="274" y="326" width="34" height="34" rx="6" />
-              <rect class="v1-cell" x="74" y="366" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="78" y="370" width="26" height="26" rx="3" />
-              <rect class="v1-cell" x="114" y="366" width="34" height="34" rx="6" />
-              <rect class="v1-cell-fill" x="118" y="370" width="26" height="26" rx="3" />
-              <rect class="v1-cell-res" x="154" y="366" width="34" height="34" rx="6" />
-              <rect class="v1-cell-res" x="194" y="366" width="34" height="34" rx="6" />
-              <rect class="v1-cell-res" x="234" y="366" width="34" height="34" rx="6" />
-              <rect class="v1-cell-res" x="274" y="366" width="34" height="34" rx="6" />
+              <rect class="wh-cell" x="191" y="64" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="194" y="67" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="227" y="64" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="230" y="67" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="263" y="64" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="266" y="67" width="24" height="18" rx="2.5" />
+              <rect class="wh-mine-ring" x="295" y="60" width="38" height="32" rx="7" />
+              <rect class="wh-cell wh-mine" x="299" y="64" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="302" y="67" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="191" y="94" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="194" y="97" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="227" y="94" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="230" y="97" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="263" y="94" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="266" y="97" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="299" y="94" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="302" y="97" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="191" y="124" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="194" y="127" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell" x="227" y="124" width="30" height="24" rx="5" />
+              <rect class="wh-fill" x="230" y="127" width="24" height="18" rx="2.5" />
+              <rect class="wh-cell-res" x="263" y="124" width="30" height="24" rx="5" />
+              <rect class="wh-cell-res" x="299" y="124" width="30" height="24" rx="5" />
               
             </g>
-            <rect class="v1-callout" x="236" y="178" width="132" height="26" rx="8" />
-            <text class="v1-callout-text v1-callout-long" x="302" y="195" text-anchor="middle">Dein Paket · 10 kWh</text>
-            <text class="v1-callout-text v1-callout-short" x="302" y="195" text-anchor="middle">Dein Paket</text>
-            <path class="v1-leader" d="M298 204 L292 242" />
+            <!-- Boden -->
+            <path class="wh-ground" d="M28 160 L352 160" />
+            <text class="wh-sub" x="80" y="178" text-anchor="middle">Windkraft</text>
+            <text class="wh-sub" x="260" y="178" text-anchor="middle">Ein Speicher · viele Anteile</text>
+            <!-- Abgabe an die Mieter -->
+            <path class="wh-net" d="M260 160 C260 192 190 190 190 234 L190 268" />
+            <g class="p-discharge">
+              <circle class="pulse" r="3.4" fill="#7fa5ff" style="--path: path('M260 160 C260 192 190 190 190 234 L190 268'); --dur: 2.4s;" />
+              <circle class="pulse" r="3.4" fill="#7fa5ff" style="--path: path('M260 160 C260 192 190 190 190 234 L190 268'); --dur: 2.4s; --delay: 0.8s;" />
+              <circle class="pulse" r="3.4" fill="#7fa5ff" style="--path: path('M260 160 C260 192 190 190 190 234 L190 268'); --dur: 2.4s; --delay: 1.6s;" />
+            </g>
+            <rect class="wh-core" x="116" y="196" width="148" height="38" rx="13" />
+            <text class="wh-core-word" x="190" y="220" text-anchor="middle">EVOSTORED</text>
+            <!-- Mehrfamilienhaus -->
+            <rect class="wh-house" x="120" y="268" width="140" height="150" rx="10" />
+            <g>
+              <rect class="wh-window wh-lit" x="136" y="284" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="178" y="284" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="220" y="284" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="136" y="314" width="24" height="18" rx="3" />
+              <rect class="wh-window" x="178" y="314" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="220" y="314" width="24" height="18" rx="3" />
+              <rect class="wh-window" x="136" y="344" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="178" y="344" width="24" height="18" rx="3" />
+              <rect class="wh-window" x="220" y="344" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="136" y="374" width="24" height="18" rx="3" />
+              <rect class="wh-window" x="178" y="374" width="24" height="18" rx="3" />
+              <rect class="wh-window wh-lit" x="220" y="374" width="24" height="18" rx="3" />
+              
+            </g>
+            <rect class="wh-door" x="180" y="396" width="20" height="22" rx="3" />
+            <text class="wh-sub" x="190" y="440" text-anchor="middle">Mieter · Mietwohnungen</text>
+            <!-- Wert-Hinweis -->
+            <rect class="wh-chip" x="266" y="300" width="108" height="46" rx="11" />
+            <text class="wh-chip-text" x="320" y="319" text-anchor="middle">Günstiger Strom</text>
+            <text class="wh-chip-text" x="320" y="334" text-anchor="middle">aus Überschuss</text>
           </svg>
           <figcaption class="flow-caption">
             <span>Beispieltag, vereinfachte Darstellung</span>
-            <span>Gold: gespeicherte Energie · Gestrichelt: noch frei</span>
+            <span>Grün: Windstrom · Blau: gespeicherte Anteile</span>
           </figcaption>
         </figure>
       </div>
@@ -300,7 +310,7 @@
             <path class="n-line" d="M545 46 C540 110 460 134 412 148" />
             <path class="n-line" d="M680 66 C680 130 560 140 430 150" />
             <path class="n-line" d="M380 196 L380 232" />
-            <circle class="pulse" r="3" fill="#f2a900" style="--path: path('M380 196 L380 232'); --dur: 1.8s;" />
+            <circle class="pulse" r="3" fill="#7fa5ff" style="--path: path('M380 196 L380 232'); --dur: 1.8s;" />
 
             <g class="n-house" transform="translate(62 30)"><path d="M0 14 L18 0 L36 14 M4 12 v18 h28 v-18" /></g>
             <g class="n-house" transform="translate(197 10)"><path d="M0 14 L18 0 L36 14 M4 12 v18 h28 v-18" /></g>
@@ -468,9 +478,9 @@
                 <rect class="b-cell" x="38" y="208" width="30" height="30" rx="4"/><rect class="b-cell" x="76" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="114" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="152" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="190" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="228" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="266" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="304" y="208" width="30" height="30" rx="4"/>
               </g>
               <text x="20" y="26">Speicherblock · Industrieklasse</text>
-              <text class="b-cap-one" x="20" y="272">Gold: als Pakete vergeben · Gestrichelt: Betriebsreserve</text>
+              <text class="b-cap-one" x="20" y="272">Blau: als Pakete vergeben · Gestrichelt: Betriebsreserve</text>
               <g class="b-cap-two">
-                <text x="20" y="266">Gold: als Pakete vergeben</text>
+                <text x="20" y="266">Blau: als Pakete vergeben</text>
                 <text x="20" y="288">Gestrichelt: Betriebsreserve</text>
               </g>
             </svg>
@@ -649,8 +659,8 @@
         <a class="brand" href="index.html">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3.5" y="2.5" width="17" height="19" rx="5" fill="none" stroke="#7fa5ff" stroke-width="1.7"/>
-            <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#f2a900"/>
-            <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#f2a900" stroke-width="1.4"/>
+            <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#7fa5ff"/>
+            <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#7fa5ff" stroke-width="1.4"/>
           </svg>
           evostored
         </a>
