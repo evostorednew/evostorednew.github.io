@@ -2,112 +2,161 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Über uns – evostored</title>
-  <meta name="description" content="Über evostored: Positionierung, Anspruch und Werte des Unternehmens." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Über uns – Evostored</title>
+  <meta name="description" content="Evostored baut die digitale Ebene für Energiespeicherung: ein Gründerteam aus Osnabrück mit einer klaren These – Speicher ist Infrastruktur, nicht Eigentum." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://www.evostored.de/ueber-uns.html" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="evostored Logo" />
-        <span class="brand-copy">
-          <span class="brand-name">evostored</span>
-          <span class="brand-tag">Intelligente Energie-Infrastruktur für Haushalte</span>
-        </span>
+
+  <header class="site-nav">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html" aria-label="Evostored – Startseite">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3.5" y="2.5" width="17" height="19" rx="5" fill="none" stroke="#eef3fc" stroke-width="1.7"/>
+          <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#ffb840"/>
+          <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#ffb840" stroke-width="1.4"/>
+        </svg>
+        evostored
       </a>
-      <div class="nav-actions">
-        <nav class="nav-links nav-links-desktop" aria-label="Hauptnavigation">
-          <a href="index.html">Start</a>
-          <a href="produkt.html">Produkt</a>
-          <a href="vision.html">Vision</a>
-          <a href="kunden.html">Für Haushalte</a>
-          <a href="partner.html">Für Partner</a>
-          <a href="team.html">Team</a>
-          <a class="active" href="ueber-uns.html">Über uns</a>
-          <a href="kontakt.html">Kontakt</a>
-          <a href="Impressum.html">Impressum</a>
-        </nav>
-        <a class="nav-cta" href="kontakt.html">Pilot anfragen</a>
-        <details class="nav-menu">
-          <summary class="nav-toggle" aria-label="Navigation ein- oder ausklappen">
-            <span>Menü</span>
-            <span class="nav-toggle-icon" aria-hidden="true"></span>
-          </summary>
-          <nav class="nav-drawer" aria-label="Mobile Navigation">
-            <a href="index.html">Start</a>
-            <a href="produkt.html">Produkt</a>
-            <a href="vision.html">Vision</a>
-            <a href="kunden.html">Für Haushalte</a>
-            <a href="partner.html">Für Partner</a>
-            <a href="team.html">Team</a>
-            <a class="active" href="ueber-uns.html">Über uns</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="Impressum.html">Impressum</a>
-            <a class="nav-drawer-cta" href="kontakt.html">Pilot anfragen</a>
-          </nav>
-        </details>
-      </div>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="index.html#so-funktionierts">So funktioniert's</a>
+        <a href="kunden.html">Für Haushalte</a>
+        <a href="partner.html">Für Partner</a>
+        <a class="active" href="ueber-uns.html">Über uns</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="kontakt.html">Pilot vormerken</a>
+      <button class="nav-burger" aria-label="Menü öffnen" aria-expanded="false">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 5.5h15M2.5 10h15M2.5 14.5h15"/></svg>
+      </button>
     </div>
+    <nav class="nav-drawer" aria-label="Mobile Navigation">
+      <a href="index.html">Start</a>
+      <a href="index.html#so-funktionierts">So funktioniert's</a>
+      <a href="kunden.html">Für Haushalte</a>
+      <a href="partner.html">Für Partner</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="btn btn-primary drawer-cta" href="kontakt.html">Pilot vormerken</a>
+    </nav>
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="container page-hero-inner">
-        <div class="page-hero-copy">
-          <span class="eyebrow">Über uns</span>
-          <h1>evostored baut die digitale Front Door für ein neues Energiesystem.</h1>
-          <p>Unser Anspruch ist nicht, wie ein kleiner Ökostrom-Anbieter zu wirken, sondern wie eine präzise, vertrauenswürdige Technologieplattform für den nächsten Schritt der Energiewende.</p>
+    <section class="page-hero chapter-night">
+      <div class="wrap">
+        <span class="kicker">Über uns</span>
+        <h1>Wir bauen die digitale Ebene für Energiespeicherung.</h1>
+        <p>Evostored entsteht in Osnabrück – aus einer einfachen Beobachtung: Die Energiewende produziert längst genug Strom. Was fehlt, ist fairer Zugang zu Speicher. Nicht jeder kann eine Batterie besitzen. Aber jeder sollte eine nutzen können.</p>
+      </div>
+    </section>
+
+    <section class="chapter chapter-night" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="section-head rv">
+          <span class="kicker">Woran wir glauben</span>
+          <h2>Vier Prinzipien, an denen wir uns messen lassen.</h2>
+        </div>
+        <div class="value-list">
+          <div class="value-item rv">
+            <h3>Zeigen statt versprechen</h3>
+            <p>Der 500er-Pilot ist als Beweissystem gebaut: Netto-Ersparnis nach allen Gebühren, monatlich gemessen. Wenn sich etwas nicht rechnet, sagen wir das.</p>
+          </div>
+          <div class="value-item rv rv-2">
+            <h3>Rollen statt Größenwahn</h3>
+            <p>Speichertechnik, Bilanzkreis, Erzeugung und Software liegen bei erfahrenen Partnern. Evostored verantwortet die digitale Kundenschicht – und macht genau diese richtig gut.</p>
+          </div>
+          <div class="value-item rv rv-3">
+            <h3>Zugang statt Besitz</h3>
+            <p>Ein zentraler Block versorgt 500 Haushalte mit rund 3,75× weniger Kapital als 500 Einzelinstallationen. Diese Effizienz gehört zu den Kunden, nicht nur in Pitchdecks.</p>
+          </div>
+          <div class="value-item rv rv-4">
+            <h3>Klartext statt Buzzwords</h3>
+            <p>Keine erfundenen Kennzahlen, keine suggerierten Partnerschaften, keine grüne Folklore. Was auf dieser Website steht, können wir belegen oder es ist als Plan gekennzeichnet.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-light">
-      <div class="container grid-2">
-        <article class="card">
-          <span class="kicker">Positionierung</span>
-          <h2>Premium, intelligent, glaubwürdig.</h2>
-          <p>evostored steht für eine neue Art von Energieprodukt: software-first, marktbasiert, transparent und auf reale Wirkung ausgelegt.</p>
-        </article>
-        <article class="card">
-          <span class="kicker">Werte</span>
-          <ul class="bullet-list">
-            <li>Technische Klarheit statt Buzzword-Übertreibung</li>
-            <li>Vertrauen durch Transparenz und nachvollziehbare Wirkung</li>
-            <li>Skalierbarkeit durch Software, Daten und starke Produktlogik</li>
-            <li>Echte Relevanz für Haushalte und Systemstabilität</li>
-          </ul>
-        </article>
+    <section class="chapter chapter-day on-day" id="team">
+      <div class="wrap">
+        <div class="section-head rv">
+          <span class="kicker">Das Team</span>
+          <h2>Drei Gründer. Eine Arbeitsteilung.</h2>
+          <p>Produkt, Energiewirtschaft und Technologie – aufgebaut als Team, das eine investierbare Speicherökonomie, eine saubere Partnerstruktur und ein digitales Kundenerlebnis gleichzeitig denken kann.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card rv">
+            <img src="team-maximilian-schwarz.jpg" alt="Porträt von Maximilian Schwarz" loading="lazy" />
+            <div>
+              <h3>Maximilian Schwarz</h3>
+              <span>Co-Founder</span>
+            </div>
+          </article>
+          <article class="team-card rv rv-2">
+            <img src="team-felix-schmidt.jpg" alt="Porträt von Felix Schmidt" loading="lazy" />
+            <div>
+              <h3>Felix Schmidt</h3>
+              <span>Co-Founder</span>
+            </div>
+          </article>
+          <article class="team-card rv rv-3">
+            <img src="team-maximilian-klekamp.jpg" alt="Porträt von Maximilian Klekamp" loading="lazy" />
+            <div>
+              <h3>Maximilian Klekamp</h3>
+              <span>Co-Founder</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-night vision">
+      <div class="wrap">
+        <span class="kicker rv" style="justify-content: center;">Die Vision</span>
+        <h2 class="rv rv-2" style="margin-top: 18px;">Eine Energiezukunft, in der Speicher <em>Infrastruktur</em> ist – nicht Eigentum.</h2>
+        <p class="rv rv-3">Strom kommt aus dem Netz, Wasser aus der Leitung – niemand baut dafür ein eigenes Kraftwerk. Wir arbeiten daran, dass Speicher genauso selbstverständlich wird: geteilt, professionell betrieben, digital zugänglich.</p>
+        <div class="hero-actions rv rv-4" style="justify-content: center; margin-top: 34px;">
+          <a class="btn btn-primary btn-arrow" href="kontakt.html">Kontakt aufnehmen</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand">
-          <img src="logo.png" alt="evostored Logo" />
-          <span class="brand-copy">
-            <span class="brand-name">evostored</span>
-            <span class="brand-tag">Smart energy orchestration for households</span>
-          </span>
-        </div>
-        <p style="margin-top: 1rem;">Die digitale Front Door für ein intelligentes, transparentes und skalierbares Energiesystem auf Haushaltsebene.</p>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="2.5" width="17" height="19" rx="5" fill="none" stroke="#eef3fc" stroke-width="1.7"/>
+            <rect x="7" y="13.5" width="10" height="4.4" rx="1.6" fill="#ffb840"/>
+            <rect x="7" y="7.1" width="10" height="4.4" rx="1.6" fill="none" stroke="#ffb840" stroke-width="1.4"/>
+          </svg>
+          evostored
+        </a>
+        <p>Digitaler Zugang zu zentraler Batteriespeicher-Infrastruktur – ohne eigene Batterie.</p>
       </div>
-      <div class="footer-links">
-        <a href="produkt.html">Produkt</a>
-        <a href="vision.html">Vision &amp; Mission</a>
+      <div class="footer-col">
+        <strong>Produkt</strong>
+        <a href="index.html#so-funktionierts">So funktioniert's</a>
         <a href="kunden.html">Für Haushalte</a>
         <a href="partner.html">Für Partner</a>
       </div>
-      <div class="footer-meta">
-        <a href="kontakt.html">Kontakt</a>
-        <a href="team.html">Team</a>
+      <div class="footer-col">
+        <strong>Unternehmen</strong>
         <a href="ueber-uns.html">Über uns</a>
-        <a href="Impressum.html">Impressum</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum &amp; Datenschutz</a>
       </div>
     </div>
+    <div class="wrap footer-base">
+      <span>© 2026 Evostored · Osnabrück</span>
+      <span>Speicher ist Infrastruktur.</span>
+    </div>
   </footer>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
