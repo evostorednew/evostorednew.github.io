@@ -766,6 +766,7 @@ h1, h2, h3 {
 .block-svg .b-cell-res { fill: var(--cloud); stroke: #b3bdcc; stroke-dasharray: 3 3; }
 .block-svg .b-detail { stroke: var(--ink-soft); stroke-width: 1.2; fill: none; }
 .block-svg text { font-family: var(--mono); font-size: 10px; fill: var(--ink-soft); letter-spacing: 0.08em; }
+.block-svg .b-cap-two { display: none; }
 .spec-list { display: grid; gap: 12px; align-content: center; }
 .spec {
   display: flex;
@@ -1247,6 +1248,8 @@ h1, h2, h3 {
   .network-svg .n-core-label { font-size: 17px; }
   .network-svg .n-sub { font-size: 15px; }
   .block-svg text { font-size: 14px; }
+  .block-svg .b-cap-one { display: none; }
+  .block-svg .b-cap-two { display: block; }
 }
 
 /* ------------------------------------------------ Reduced Motion */

@@ -160,7 +160,7 @@
             <text x="188" y="230">6 Uhr</text>
             <text x="348" y="230">12 Uhr</text>
             <text x="508" y="230">18 Uhr</text>
-            <text x="664" y="230">24 Uhr</text>
+            <text x="690" y="230" text-anchor="end">24 Uhr</text>
 
             <!-- Abendlücke: Bedarf hoch, Erzeugung weg (beginnt hinter der PV-Fläche) -->
             <path class="fill-gap" d="M585 102 C605 96 625 104 645 122 C665 140 680 158 690 166 L690 210 L585 210 Z" />
@@ -171,7 +171,7 @@
             <path class="curve-load" d="M40 168 C90 156 130 138 176 132 C230 126 280 160 360 170 C430 178 500 148 560 112 C590 96 620 100 645 122 C665 140 680 158 690 166" />
 
             <text class="anno" x="308" y="44">Mittag: Erzeugung hoch, Bedarf niedrig</text>
-            <text class="anno" x="470" y="86">Abend: Bedarf hoch, Sonne weg</text>
+            <text class="anno" x="690" y="86" text-anchor="end">Abend: Bedarf hoch, Sonne weg</text>
           </svg>
           <figcaption class="daychart-legend">
             <span><i class="l-pv"></i>Solarerzeugung</span>
@@ -192,7 +192,7 @@
             <text x="188" y="222">6 Uhr</text>
             <text x="348" y="222">12 Uhr</text>
             <text x="508" y="222">18 Uhr</text>
-            <text x="664" y="222">24 Uhr</text>
+            <text x="690" y="222" text-anchor="end">24 Uhr</text>
 
             <rect class="band-cheap" x="305" y="36" width="130" height="168" />
             <rect class="band-dear" x="540" y="36" width="105" height="168" />
@@ -201,10 +201,10 @@
 
             <path class="curve-price" d="M40 128 C90 120 130 112 176 108 C230 103 270 140 320 172 C345 186 375 192 405 184 C440 174 470 152 500 132 C525 114 550 82 578 64 C598 52 615 56 632 74 C652 96 672 114 690 122" />
 
-            <text class="band-label-cheap" x="312" y="56">Günstig einkaufen</text>
-            <text x="312" y="72">teils unter 0 ct</text>
-            <text class="band-label-dear" x="546" y="178">Abendspitze</text>
-            <text x="546" y="194">Bedarf hoch</text>
+            <text class="band-label-cheap" x="370" y="56" text-anchor="middle">Günstig einkaufen</text>
+            <text x="370" y="72" text-anchor="middle">teils unter 0 ct</text>
+            <text class="band-label-dear" x="592" y="178" text-anchor="middle">Abendspitze</text>
+            <text x="592" y="194" text-anchor="middle">Bedarf hoch</text>
           </svg>
           <figcaption class="daychart-legend">
             <span><i class="l-price"></i>Strompreis an der Börse</span>
@@ -440,7 +440,7 @@
             <svg class="block-svg" viewBox="0 0 460 300" role="img" aria-hidden="true">
               <rect class="b-frame" x="20" y="40" width="420" height="210" rx="12" />
               <path class="b-detail" d="M20 78 h420 M348 40 v210" />
-              <text x="360" y="66">Steuerung</text>
+              <text x="394" y="66" text-anchor="middle">Steuerung</text>
               <path class="b-detail" d="M360 88 h56 M360 100 h56 M360 112 h56" />
               <g>
                 <rect class="b-cell" x="38" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="76" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="114" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="152" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="190" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="228" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="266" y="94" width="30" height="30" rx="4"/><rect class="b-cell" x="304" y="94" width="30" height="30" rx="4"/>
@@ -449,7 +449,11 @@
                 <rect class="b-cell" x="38" y="208" width="30" height="30" rx="4"/><rect class="b-cell" x="76" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="114" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="152" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="190" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="228" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="266" y="208" width="30" height="30" rx="4"/><rect class="b-cell b-cell-res" x="304" y="208" width="30" height="30" rx="4"/>
               </g>
               <text x="20" y="26">Speicherblock · Industrieklasse</text>
-              <text x="20" y="272">Gelb: als Pakete vergeben · Gestrichelt: Betriebsreserve</text>
+              <text class="b-cap-one" x="20" y="272">Gelb: als Pakete vergeben · Gestrichelt: Betriebsreserve</text>
+              <g class="b-cap-two">
+                <text x="20" y="266">Gelb: als Pakete vergeben</text>
+                <text x="20" y="288">Gestrichelt: Betriebsreserve</text>
+              </g>
             </svg>
           </figure>
 
