@@ -1,8 +1,8 @@
 /* ============================================================
    Evostored Design System — hell & vertrauensvoll
-   Weißer Grund, Tinten-Navy als Schrift, Petrol als
+   Weißer Grund, Tinten-Navy als Schrift, Dunkelblau als
    Aktionsfarbe. Funktionale Farben nur in Diagrammen:
-   Petrol = gespeicherte Energie, Blau = Netz/digital,
+   Gold = gespeicherte Energie, Blau = Netz/digital,
    Grün = Erzeugung, Koralle = Verbrauch/teuer.
    Dunkle Kapitel nur als Akzent (Perspektivwechsel, Abschluss).
    ============================================================ */
@@ -55,11 +55,12 @@
   --ink-soft: #4a586e;
   --faint: #64748b;
 
-  /* Aktionsfarbe: Petrol – die Evostored-Markenfarbe */
-  --petrol: #14b8a6;
-  --petrol-deep: #0b6e63;
-  --petrol-soft: #def4f1;
-  --petrol-ink: #04211e;
+  /* Aktionsfarbe: Dunkelblau – die Evostored-Markenfarbe */
+  --brand: #1e40af;
+  --brand-deep: #16307d;
+  --brand-soft: #e7edfb;
+  --brand-ink: #f5f8ff;
+  --brand-bright: #7fa5ff; /* Akzente auf dunklen Kapiteln */
 
   /* Blau nur als Diagramm-Semantik (Netz / Strombörse) */
   --blue: #1f5eea;
@@ -75,8 +76,8 @@
   --snow-soft: #a3b2ca;
 
   /* Funktionale Energie-Farben (Diagramme) */
-  --cell: #14b8a6;        /* gespeicherte Energie */
-  --cell-deep: #0b6e63;   /* Petrol als Text auf hell */
+  --cell: #f2a900;        /* gespeicherte Energie */
+  --cell-deep: #8a5c00;   /* Gold als Text auf hell */
   --pv: #1f9e6d;          /* Erzeugung */
   --load: #e05a48;        /* Verbrauch / teuer */
 
@@ -119,12 +120,12 @@ button { font: inherit; cursor: pointer; }
 ul, ol { list-style: none; }
 strong { font-weight: 600; }
 
-::selection { background: rgba(20, 184, 166, 0.35); }
+::selection { background: rgba(30, 64, 175, 0.22); }
 
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--petrol-deep);
+  outline: 2px solid var(--brand-deep);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -136,7 +137,7 @@ summary:focus-visible {
   text-underline-offset: 2px;
   transition: color 0.16s var(--ease);
 }
-.text-link:hover { color: var(--petrol-deep); }
+.text-link:hover { color: var(--brand-deep); }
 
 /* ------------------------------------------------ Typo-Rollen */
 .kicker {
@@ -155,7 +156,7 @@ summary:focus-visible {
   width: 7px;
   height: 7px;
   border-radius: 2px;
-  background: var(--petrol);
+  background: var(--brand);
   flex: 0 0 auto;
 }
 .kicker.k-blue::before { background: var(--blue); }
@@ -206,8 +207,8 @@ h1, h2, h3 {
     border-color 0.18s var(--ease), color 0.18s var(--ease), box-shadow 0.18s var(--ease);
 }
 .btn:active { transform: translateY(1px); }
-.btn-primary { background: var(--petrol); color: var(--petrol-ink); box-shadow: 0 10px 26px rgba(20, 184, 166, 0.4); }
-.btn-primary:hover { background: #2acbb8; }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: 0 10px 26px rgba(30, 64, 175, 0.35); }
+.btn-primary:hover { background: #2a52d4; }
 .btn-ghost { border-color: var(--line-strong); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--ink-soft); background: var(--cloud); }
 .btn-arrow::after { content: "→"; font-family: var(--body); transition: transform 0.18s var(--ease); }
@@ -288,7 +289,7 @@ h1, h2, h3 {
 .chapter-dark .section-head p,
 .chapter-dark p { color: var(--snow-soft); }
 .chapter-dark .kicker { color: var(--snow-soft); }
-.chapter-dark .kicker::before { background: var(--cell); }
+.chapter-dark .kicker::before { background: var(--brand-bright); }
 .chapter-tight { padding-top: clamp(20px, 3vw, 36px); }
 
 /* Reveal-Grundlage: verstecken nur, wenn JS aktiv ist */
@@ -303,7 +304,7 @@ h1, h2, h3 {
   position: relative;
   padding-block: clamp(120px, 14vw, 168px) clamp(64px, 8vw, 104px);
   background:
-    radial-gradient(80% 55% at 78% 0%, rgba(20, 184, 166, 0.12), transparent 68%),
+    radial-gradient(80% 55% at 78% 0%, rgba(242, 169, 0, 0.10), transparent 68%),
     radial-gradient(55% 42% at 0% 100%, rgba(31, 94, 234, 0.05), transparent 72%),
     var(--paper);
   overflow: hidden;
@@ -328,8 +329,8 @@ h1, h2, h3 {
   align-items: center;
 }
 .hero .kicker {
-  background: var(--petrol-soft);
-  color: var(--petrol-deep);
+  background: var(--brand-soft);
+  color: var(--brand-deep);
   padding: 7px 13px;
   border-radius: 99px;
 }
@@ -341,7 +342,7 @@ h1, h2, h3 {
 }
 .hero-copy h1 em {
   font-style: normal;
-  color: var(--petrol-deep);
+  color: var(--brand-deep);
 }
 .hero-copy > p {
   font-size: clamp(16.5px, 1.5vw, 18.5px);
@@ -400,7 +401,7 @@ h1, h2, h3 {
   background: var(--cloud);
   color: var(--ink-soft);
 }
-/* Mittag = laden (blau wie die Lade-Pulse), Abend = liefern (petrol) */
+/* Mittag = laden (blau wie die Lade-Pulse), Abend = liefern (gold) */
 .flow-state i { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); flex: 0 0 auto; transition: background 0.4s var(--ease); }
 .is-evening .flow-state i { background: var(--cell); }
 
@@ -408,12 +409,12 @@ h1, h2, h3 {
 .flow-svg text { font-family: var(--mono); letter-spacing: 0.02em; }
 
 .fs-node { fill: var(--cloud); stroke: var(--line-strong); }
-.fs-node-core { fill: var(--petrol-soft); stroke: var(--cell); }
+.fs-node-core { fill: var(--brand-soft); stroke: var(--brand); }
 .fs-icon { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .fs-label { fill: var(--ink); font-size: 12.5px; font-weight: 500; }
 .fs-sub { fill: var(--ink-soft); font-size: 10px; }
 .fs-line { stroke: var(--line-strong); stroke-width: 1.5; fill: none; }
-.fs-core-word { fill: var(--petrol-deep); font-size: 12.5px; font-weight: 600; letter-spacing: 0.2em; }
+.fs-core-word { fill: var(--brand-deep); font-size: 12.5px; font-weight: 600; letter-spacing: 0.2em; }
 
 .fs-soc-track { fill: #e2e7ef; }
 .fs-soc-fill { fill: var(--cell); transition: width 1.1s var(--ease); }
@@ -591,7 +592,7 @@ h1, h2, h3 {
   font-family: var(--display);
   font-size: clamp(19px, 2.4vw, 25px);
   font-weight: 600;
-  color: var(--cell);
+  color: var(--brand-bright);
   letter-spacing: -0.015em;
 }
 .network-stage {
@@ -599,18 +600,18 @@ h1, h2, h3 {
   border: 1px solid var(--night-line);
   border-radius: var(--r-lg);
   background:
-    radial-gradient(80% 70% at 50% 100%, rgba(20, 184, 166, 0.07), transparent 70%),
+    radial-gradient(80% 70% at 50% 100%, rgba(127, 165, 255, 0.08), transparent 70%),
     var(--night-2);
   padding: clamp(20px, 3.4vw, 40px);
 }
 .network-svg { width: 100%; height: auto; }
 .network-svg .n-house { stroke: var(--snow-soft); stroke-width: 1.5; fill: none; stroke-linejoin: round; stroke-linecap: round; }
 .network-svg .n-line { stroke: var(--night-line-strong); stroke-width: 1.2; fill: none; }
-.network-svg .n-core { fill: var(--night); stroke: var(--cell); stroke-width: 1.6; }
+.network-svg .n-core { fill: var(--night); stroke: var(--brand-bright); stroke-width: 1.6; }
 .network-svg text { font-family: var(--mono); letter-spacing: 0.1em; }
-.network-svg .n-core-label { fill: var(--cell); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; }
+.network-svg .n-core-label { fill: var(--brand-bright); font-size: 12px; font-weight: 600; letter-spacing: 0.22em; }
 .network-svg .n-block { fill: #16273f; stroke: var(--night-line-strong); stroke-width: 1.4; }
-.network-svg .n-cell { fill: rgba(20, 184, 166, 0.75); }
+.network-svg .n-cell { fill: rgba(242, 169, 0, 0.75); }
 .network-svg .n-sub { fill: var(--snow-soft); font-size: 10.5px; }
 
 /* ------------------------------------------------ Schritte */
@@ -637,11 +638,11 @@ h1, h2, h3 {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: var(--petrol-deep);
+  color: var(--cell-deep);
 }
 .step-card:nth-child(2)::before { color: var(--blue-deep); }
 .step-card:nth-child(3)::before { color: var(--pv); }
-.step-card:nth-child(1) .step-visual { background: var(--petrol-soft); }
+.step-card:nth-child(1) .step-visual { background: #fbf0d4; }
 .step-card:nth-child(2) .step-visual { background: var(--blue-soft); }
 .step-card:nth-child(3) .step-visual { background: #eaf6df; }
 .step-card h3 { font-size: 20.5px; }
@@ -678,7 +679,7 @@ h1, h2, h3 {
   background: var(--paper);
   display: grid;
   place-items: center;
-  color: var(--petrol-deep);
+  color: var(--brand-deep);
 }
 .app-point i svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .app-point strong { display: block; font-family: var(--display); font-size: 16.5px; letter-spacing: -0.01em; }
@@ -722,7 +723,7 @@ h1, h2, h3 {
 .soc-num { font-family: var(--mono); font-size: 34px; font-weight: 600; color: var(--snow); font-variant-numeric: tabular-nums; }
 .soc-num .unit { font-size: 14px; color: var(--snow-soft); }
 .soc-bar { height: 10px; border-radius: 99px; background: rgba(164, 194, 255, 0.14); overflow: hidden; }
-.soc-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #0c8577, var(--cell)); transition: width 1.3s var(--ease); }
+.soc-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #c07f06, var(--cell)); transition: width 1.3s var(--ease); }
 .soc-caption { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10.5px; color: var(--snow-soft); letter-spacing: 0.05em; }
 .device-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .dstat {
@@ -763,7 +764,7 @@ h1, h2, h3 {
 }
 .block-svg { width: 100%; height: auto; }
 .block-svg .b-frame { fill: #fbfcfe; stroke: var(--ink); stroke-width: 1.7; }
-.block-svg .b-cell { fill: rgba(20, 184, 166, 0.22); stroke: var(--cell-deep); stroke-width: 1.2; }
+.block-svg .b-cell { fill: rgba(242, 169, 0, 0.22); stroke: var(--cell-deep); stroke-width: 1.2; }
 .block-svg .b-cell-res { fill: var(--cloud); stroke: #b3bdcc; stroke-dasharray: 3 3; }
 .block-svg .b-detail { stroke: var(--ink-soft); stroke-width: 1.2; fill: none; }
 .block-svg text { font-family: var(--mono); font-size: 10px; fill: var(--ink-soft); letter-spacing: 0.08em; }
@@ -869,7 +870,7 @@ h1, h2, h3 {
   font-family: var(--display);
   font-weight: 600;
   font-size: 15.5px;
-  color: var(--petrol-deep);
+  color: var(--brand-deep);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -897,7 +898,7 @@ h1, h2, h3 {
   margin-top: 5px;
   background: var(--paper);
 }
-.milestone.is-active .milestone-dot i { border-color: var(--cell); background: var(--cell); box-shadow: 0 0 0 5px rgba(20, 184, 166, 0.22); }
+.milestone.is-active .milestone-dot i { border-color: var(--brand); background: var(--brand); box-shadow: 0 0 0 5px rgba(30, 64, 175, 0.18); }
 .milestone h3 { font-size: 17.5px; }
 .milestone-status {
   margin-top: 7px;
@@ -911,7 +912,7 @@ h1, h2, h3 {
   padding: 4px 9px;
   color: var(--ink-soft);
 }
-.milestone.is-active .milestone-status { color: var(--petrol-deep); border-color: rgba(20, 184, 166, 0.6); }
+.milestone.is-active .milestone-status { color: var(--brand-deep); border-color: rgba(30, 64, 175, 0.45); }
 .milestone p { font-size: 14.5px; color: var(--ink-soft); max-width: 62ch; }
 
 /* ------------------------------------------------ Ökosystem */
@@ -946,9 +947,9 @@ h1, h2, h3 {
 .eco-card p { font-size: 13.5px; color: var(--ink-soft); }
 .eco-center {
   margin-top: 14px;
-  border: 1px solid rgba(20, 184, 166, 0.55);
+  border: 1px solid rgba(30, 64, 175, 0.35);
   border-radius: var(--r-md);
-  background: var(--petrol-soft);
+  background: var(--brand-soft);
   padding: 18px 22px;
   display: flex;
   flex-wrap: wrap;
@@ -967,17 +968,17 @@ h1, h2, h3 {
   margin-inline: auto;
   font-size: clamp(30px, 5vw, 54px);
 }
-.vision h2 em { font-style: normal; color: var(--cell); }
+.vision h2 em { font-style: normal; color: var(--brand-bright); }
 .vision p { max-width: 620px; margin: 22px auto 0; }
 
 .cta-final { border-top: 1px solid var(--night-line); text-align: center; }
 .cta-final h2 { font-size: clamp(28px, 4vw, 44px); max-width: 700px; margin-inline: auto; }
 .cta-final p { max-width: 54ch; margin: 18px auto 0; }
 .cta-final .hero-actions { justify-content: center; margin-top: 32px; }
-.cta-final .btn-primary { box-shadow: 0 12px 30px rgba(20, 184, 166, 0.28); }
+.cta-final .btn-primary { box-shadow: 0 12px 30px rgba(127, 165, 255, 0.25); }
 .cta-mail { margin-top: 20px; font-family: var(--mono); font-size: 12.5px; color: var(--snow-soft); }
 .cta-mail a { color: var(--snow); border-bottom: 1px solid var(--night-line-strong); }
-.cta-mail a:hover { color: var(--cell); border-color: var(--cell); }
+.cta-mail a:hover { color: var(--brand-bright); border-color: var(--brand-bright); }
 
 /* ------------------------------------------------ Footer (dunkel, schließt ab) */
 .site-footer {
@@ -1046,7 +1047,7 @@ h1, h2, h3 {
   align-content: start;
   position: relative;
 }
-.pack.is-featured { border-color: rgba(12, 133, 119, 0.55); box-shadow: 0 20px 50px rgba(12, 133, 119, 0.12); }
+.pack.is-featured { border-color: rgba(30, 64, 175, 0.45); box-shadow: 0 20px 50px rgba(30, 64, 175, 0.12); }
 .pack-flag {
   position: absolute;
   top: -11px;
@@ -1055,8 +1056,8 @@ h1, h2, h3 {
   font-size: 9.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: var(--petrol);
-  color: var(--petrol-ink);
+  background: var(--brand);
+  color: var(--brand-ink);
   border-radius: 99px;
   padding: 4px 10px;
   font-weight: 600;
@@ -1113,7 +1114,7 @@ h1, h2, h3 {
   gap: 16px;
   transition: color 0.16s var(--ease);
 }
-.faq summary:hover { color: var(--petrol-deep); }
+.faq summary:hover { color: var(--brand-deep); }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; font-family: var(--mono); font-size: 19px; color: var(--ink-soft); transition: transform 0.2s var(--ease); }
 .faq details[open] summary::after { transform: rotate(45deg); }
@@ -1188,8 +1189,8 @@ h1, h2, h3 {
 @media (max-width: 1020px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
   .hero .kicker {
-  background: var(--petrol-soft);
-  color: var(--petrol-deep);
+  background: var(--brand-soft);
+  color: var(--brand-deep);
   padding: 7px 13px;
   border-radius: 99px;
 }
@@ -1225,7 +1226,7 @@ h1, h2, h3 {
   .nav-open .nav-drawer { opacity: 1; transform: none; pointer-events: auto; }
   .nav-drawer a { padding: 12px 6px; font-size: 16px; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--line); }
   .nav-drawer a:last-child { border-bottom: 0; }
-  .nav-drawer .drawer-cta { margin-top: 12px; border-bottom: 0; color: var(--petrol-ink); }
+  .nav-drawer .drawer-cta { margin-top: 12px; border-bottom: 0; color: var(--brand-ink); }
 
   .oldway { grid-template-columns: minmax(0, 1fr); }
   .infra-grid { grid-template-columns: minmax(0, 1fr); }
